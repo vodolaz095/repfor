@@ -40,7 +40,7 @@ func main() {
 		os.Exit(1)
 	}
 	command = os.Args[len(os.Args)-1]
-	flag.Int64Var(&delay, "d", 3, "Interval beteen executing command")
+	flag.Int64Var(&delay, "d", 3, "Interval between executing command")
 	flag.StringVar(&outlog, "o", "/dev/stdout", "Where to stream stdout")
 	flag.StringVar(&errorlog, "e", "/dev/stderr", "Where to stream stderr")
 
@@ -55,7 +55,6 @@ func main() {
 		panic(err)
 	}
 	defer func() {
-		fmt.Printf("REPFOR stopped...\n")
 		outErrorFile.Close()
 		outLogFile.Close()
 	}()

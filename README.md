@@ -10,17 +10,17 @@ Usage
 Parameters
 ================================
 
-* d - delay in seconds, before repeating the command
-* o - where to stream stdout of command
-* e - where to stream stderror of command
+* d - delay in seconds, before repeating the command, default is 3 seconds
+* o - where to stream stdout of command, default is /dev/stdout
+* e - where to stream stderror of command, default is /dev/stderr
 
 
 Examples:
 ================================
 ```shell
 
-	# repfor 'cat /etc/issue'
-	# repfor -d=5 -o=output.log -e=error.log 'ps -e'
+	[vodolaz095@steel ~]$ repfor 'cat /etc/issue'
+	[vodolaz095@steel ~]$ repfor -d=5 -o=output.log -e=error.log 'ps -e'
 
 ```
 
@@ -29,7 +29,7 @@ Installation from source:
 We assume you have [Go](http://golang.org/) installed
 ```shell
 
-	# go build -o ~/bin/repfor github.com/vodolaz095/repfor
+	[vodolaz095@steel ~]$ go build -o ~/bin/repfor github.com/vodolaz095/repfor
 
 ```
 

@@ -2,6 +2,8 @@ REPeat FORever
 ================================
 Simple console utility to repeat command given forever.
 I do not care about you, but for me this code saved my day.
+You can say, that we can achive the same thing using cron, but cron do not allows 
+us to execute commands more often than once per minute.
 
 Usage
 ================================

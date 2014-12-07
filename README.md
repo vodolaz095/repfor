@@ -13,6 +13,7 @@ Parameters
 * d - delay in seconds, before repeating the command, default is 3 seconds
 * o - where to stream stdout of command, default is /dev/stdout
 * e - where to stream stderror of command, default is /dev/stderr
+* l - limit the number of tries to execute command given, default is `-1` - infinitely
 
 
 Examples:

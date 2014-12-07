@@ -45,8 +45,11 @@ func main() {
 	var command, outlog, errorlog string
 	if len(os.Args) == 1 {
 		fmt.Println("Usage: repfor [-d=3] [-o=/dev/stdout] [-e=/dev/stderr] [-l=0] commandToRepeatForeverWithDelayProvided")
-		fmt.Println("Examples:\n # repfor 'cat /etc/issue' \n # repfor -d=5 -o=output.log -e=error.log 'ps -e'")
-		fmt.Println("Visit https://github.com/vodolaz095/repfor for more information")
+		fmt.Println("Examples: \n")
+		fmt.Println(" # repfor 'cat /etc/issue'")
+		fmt.Println(" # repfor -l=5 commandToRepeat5TimesOnly")
+		fmt.Println(" # repfor -d=5 -o=output.log -e=error.log 'ps -e'")
+		fmt.Println("\nVisit https://github.com/vodolaz095/repfor for more information.")
 		os.Exit(1)
 	}
 	command = os.Args[len(os.Args)-1]

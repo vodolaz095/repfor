@@ -2,12 +2,12 @@ REPeat FORever
 ================================
 Simple console utility to repeat command given forever.
 I do not care about you, but for me this code saved my day.
-You can say, that we can achive the same thing using cron, but cron do not allows 
+You can say, that we can achive the same thing using cron, but cron do not allows
 us to execute commands more often than once per minute.
 
 Usage
 ================================
-`repfor [-d=3] [-o=/dev/stdout] [-e=/dev/stderr] commandToRepeatForeverWithDelayProvided`
+`repfor [-d=3] [-o=/dev/stdout] [-e=/dev/stderr] [-l=-1] commandToRepeatForeverWithDelayProvided`
 
 Parameters
 ================================
@@ -29,10 +29,11 @@ Examples:
 
 Installation from source:
 ================================
-We assume you have [Go](http://golang.org/) installed
+We assume you have Linux with [Go](http://golang.org/) installed
 ```shell
 
 	[vodolaz095@steel ~]$ go build -o ~/bin/repfor github.com/vodolaz095/repfor
+	[vodolaz095@steel ~]$ ./repfor -d=1 -l=3 'echo "Во имя Отца, и Сына, и Святого Духа, Аминь! Слава Тебе,  Боже наш, слава Тебе."'
 
 ```
 
